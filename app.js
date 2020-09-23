@@ -63,5 +63,5 @@ $("#ex2").submit(function fileType(){
  .map(char => String.fromCharCode(char.charCodeAt(0) + 1))//mutates a array 
  .join('');
 
- console.log(moveCharsForward('abcd'));
+ console.log(moveCharsForward('a'));
 
