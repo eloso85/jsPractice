@@ -57,11 +57,18 @@ $("#ex2").submit(function fileType(){
  //String.fromCharCode
  //charCodeAt
 
- const moveCharsForward =(str) => 
- str
- .split('')// splits it into array every character in to a array
- .map(char => String.fromCharCode(char.charCodeAt(0) + 1))//mutates a array 
- .join('');
+ $("#ex3").submit(function moveCharsForward(){ 
+     var letter =$("#letter").val();
 
- console.log(moveCharsForward('a'));
+     const getNextLetter = (str) => 
+     str
+     .split('')
+     .map(char=> String.fromCharCode(char.charCodeAt(0)+1))
+     .join('');
 
+    $("#ex3Answer").html(getNextLetter(letter));
+ 
+ event.preventDefault()
+ console.log(getNextLetter(letter))
+ })
+ 
